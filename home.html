@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marché Vodù</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #fff;
+      color: #fff;
+      display: flex;
+    }
+    .sidebar {
+      width: 70px;
+      background: linear-gradient(to top, whitesmoke, #aee4fc);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      position: relative;
+    }
+
+    .sidebar button {
+      background: none;
+      border: none;
+      margin: 1rem 0;
+      cursor: pointer;
+    }
+
+    .sidebar img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .perfil {
+      position: absolute;
+      bottom: 1rem;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .perfil img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .main {
+      flex: 1;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      position: relative;
+      height: 200px;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card .info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+
+    .highlight {
+      grid-column: span 3;
+      height: 150px;
+      display: flex;
+      flex-direction: row;
+      padding: 1rem;
+      justify-content: space-around;
+      align-items: center;
+      background: linear-gradient(to top, whitesmoke, #aee4fc);
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .highlight:hover {
+      transform: scale(1.02);
+    }
+
+    .highlight img {
+      width: 120px;
+      height: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
+    }
+
+    .highlight h4, .highlight p {
+      margin: 0.2rem;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <button onclick="alert('Pesquisar')">
+      <img src="https://img.icons8.com/ios-filled/50/FFFFFF/search--v1.png" alt="Search" />
+    </button>
+    <button onclick="alert('Carrinho')">
+      <img src="https://img.icons8.com/ios-filled/50/FFFFFF/shopping-bag.png" alt="Cart" />
+    </button>
+    <button onclick="alert('Favoritos')">
+      <img src="https://img.icons8.com/ios-filled/50/FFFFFF/like--v1.png" alt="Favorites" />
+    </button>
+    <button onclick="alert('Perfil')">
+      <img src="https://img.icons8.com/ios-filled/50/FFFFFF/user.png" alt="User" />
+    </button>
+    <div class="perfil">
+      <img src="p.jpg" alt="Avatar" />
+    </div>
+  </nav>
+  <main class="main">
+
+    <div class="highlight" onclick="window.location.href='A.html'">
+      <img src="Audi A4.jpg" alt="Produto em destaque" />
+      <div>
+        <h4>PRODUTO EM DESTAQUE</h4>
+        <p>
+         Audi A4
+        </p>
+        <p>R$ 333.990</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='B.html'">
+      <img src="BMW M4.jpg" alt="Produto" />
+      <div class="info">
+        <h4>BMW M4</h4>
+        <p>R$ 1.399.950,00</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='produto.html'">
+      <img src="Chevrolet Camaro.jpg" alt="Produto" />
+      <div class="info">
+        <h4>Produto 2</h4>
+        <p>R$ 99,90</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='produto.html'">
+      <img src="Dodge Charger.jpg" alt="Produto" />
+      <div class="info">
+        <h4>Dodge Charger</h4>
+        <p>US$ 59.995</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='produto.html'">
+      <img src="Ferrari 488 GTB.jpg" alt="Produto" />
+      <div class="info">
+        <h4>Ferrari 488 GTB</h4>
+        <p>US$ 280.000</p>
+      </div>
+    </div>
+
+    <div class="highlight" onclick="window.location.href='produto.html'">
+      <img src="Ford Mustang.jpg" alt="Produto em destaque" />
+      <div>
+        <h4>PRODUTO EM DESTAQUE</h4>
+        <p>
+          Ford Mustang
+        </p>
+        <p>US$ 44.000</p>
+      </div>
+    </div>
+
+    <div class="highlight" onclick="window.location.href='produto.html'">
+      <img src="Honda Civic Type R.jpg" alt="Produto em destaque" />
+      <div>
+        <h4>PRODUTO EM DESTAQUE</h4>
+        <p>
+         Honda Civic Type R
+        </p>
+        <p>US$ 46.690</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='produto.html'">
+      <img src="Mercedes-Benz Classe C.jpg" alt="Produto" />
+      <div class="info">
+        <h4>Mercedes-Benz Classe C</h4>
+        <p>US$ 45.000</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='produto.html'">
+      <img src="Nissan GT-R.jpg" alt="Produto" />
+      <div class="info">
+        <h4>Nissan GT-R</h4>
+        <p>US$ 97.400</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='produto.html'">
+      <img src="Porsche 911.jpg" alt="Produto" />
+      <div class="info">
+        <h4>Porsche 911</h4>
+        <p>US$ 277.800</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='produto.html'">
+      <img src="Subaru WRX STI.jpg" alt="Produto" />
+      <div class="info">
+        <h4>Subaru WRX STI</h4>
+        <p>US$ 30.000</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='produto.html'">
+      <img src="Toyota Supra.jpg" alt="Produto" />
+      <div class="info">
+        <h4>Toyota Supra</h4>
+        <p>US$ 86.295</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.location.href='produto.html'">
+      <img src="Volkswagen Golf GTI.jpg" alt="Produto" />
+      <div class="info">
+        <h4>Volkswagen Golf GTI</h4>
+        <p>US$ 33.640 </p>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

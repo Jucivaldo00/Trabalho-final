@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produto - Marché Vodù</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f4f6fa;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      width: 90%;
+      max-width: 1000px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+    .left, .right {
+      flex: 1;
+      padding: 2rem;
+    }
+    .left {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .left img {
+      width: 80%;
+      max-width: 300px;
+      margin-bottom: 1rem;
+    }
+    .thumbnails {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .thumbnails img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .thumbnails img:hover {
+      border-color: #333;
+    }
+    .right h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .rating {
+      margin: 0.5rem 0;
+      color: #666;
+    }
+    .description {
+      margin: 1rem 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .size-info {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .size-box {
+      background: #eee;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    .price {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .actions button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .add-cart {
+      background: #fff;
+      border: 2px solid #000;
+    }
+    .buy-now {
+      background: #000;
+      color: #fff;
+    }
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .quantity input {
+      width: 40px;
+      text-align: center;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="Audi A4.jpg" alt="Produto" />
+      <div class="thumbnails">
+        <img src="Audi1.jpg" alt="Lado" />
+        <img src="Audi2.jpg" alt="Costas" />
+        <img src="Audi3.jpg" alt="Detalhe" />
+      </div>
+    </div>
+    <div class="right">
+      <p style="color: #888; margin-bottom: 0.5rem;">Samedi</p>
+      <h2>Audi A4</h2>
+      <p class="rating">8/10 - 15 avaliações</p>
+      <p class="description">
+        O Audi A4 é um sedã de luxo de porte médio que combina elegância, desempenho e tecnologia de ponta. Ele é conhecido por seu design sofisticado, interior refinado e condução equilibrada.
+      </p>
+      <div class="size-info">
+        <div class="size-box">Altura: 1,43 metros"</div>
+        <div class="size-box">Largura: 1,83 metros"</div>
+      </div>
+      <p class="price">R$ 333.990</p>
+      <div class="actions">
+        <div class="quantity">
+          <button onclick="document.getElementById('qty').stepDown()">−</button>
+          <input id="qty" type="number" value="1" min="1" />
+          <button onclick="document.getElementById('qty').stepUp()">+</button>
+        </div>
+        <button class="add-cart">Adicionar ao carrinho</button>
+        <button class="buy-now" onclick="window.location.href='home.html'">Voltar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
